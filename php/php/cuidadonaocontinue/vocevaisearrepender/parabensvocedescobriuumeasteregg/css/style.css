@@ -1,0 +1,266 @@
+/*------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'StarJedi'; /* Nome da fonte */
+    src: url('star_jedi/starjedi/Starjedi.ttf') format('truetype'); /* Caminho para o arquivo da fonte */
+    /* Adicione outros formatos de fonte conforme necessário */
+}
+
+@font-face {
+    font-family: 'StarJout'; /* Nome da fonte */
+    src: url('star_jedi/starjout/StarJout.ttf') format('truetype'); /* Caminho para o arquivo da fonte */
+    /* Adicione outros formatos de fonte conforme necessário */
+}
+
+@font-face {
+    font-family: 'StJedise'; /* Nome da fonte */
+    src: url('star_jedi/stjedise/STJEDISE.ttf') format('truetype'); /* Caminho para o arquivo da fonte */
+    /* Adicione outros formatos de fonte conforme necessário */
+}
+
+@font-face {
+    font-family: 'Strjmono'; /* Nome da fonte */
+    src: url('star_jedi/stjelogo/Strjmono.ttf') format('truetype'); /* Caminho para o arquivo da fonte */
+    /* Adicione outros formatos de fonte conforme necessário */
+}
+
+
+/* --------------------------------- [Corpo] ------------------------------ */
+body{
+  background-color: black;
+}
+
+/* ----------------------------- Estilo para o topo -------------------------- */
+.topo {
+    background-color: black; /* Fundo preto */
+    text-align: center;
+    color: white; /* Texto branco */
+    width: 100%;
+    Height: 100%;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+.imagemtopo{
+    width: 100%; /* Defina a largura para preencher a largura do contêiner pai */
+    height: auto; /* Isso manterá a proporção da imagem */
+    max-width: 1550px; /* Limite máximo de largura da imagem */
+    max-height: 690px; /* Limite máximo de altura da imagem */
+    margin: 0 auto; /* Centralize horizontalmente */
+}
+
+.imagem-topo {
+    position: relative;
+}
+
+.texto-sobre-imagem {
+    position: absolute;
+    font-family: 'StarJedi', sans-serif; /* Use a fonte StarJedi, se disponível, ou uma fonte sans-serif genérica */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Move o texto para o centro */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
+}
+
+/* ----------------------- Estilo para os créditos  -------------------- */
+.creditos {
+    text-align: center;
+    color: yellow; /* Cor do texto amarelo */
+    font-family: 'StarJedi', sans-serif; /* Fonte de Star Wars */
+    position: relative;
+    width: 1550px; /* Define a largura do contêiner */
+    height: 690px; /* Define a altura do contêiner */
+    /*border: 1px solid red;*/
+  }
+  
+  .creditos h2 {
+    font-size: 48px; /* Tamanho grande de fonte */
+    margin-top: 20px; /* Margem superior para separar o texto "Créditos" do topo */
+    /*border: 1px solid blue;*/
+    background-color: black;
+    margin-bottom:0;
+  }
+  
+  .creditos-container {
+    overflow: hidden;
+    position: relative;
+    margin-top: 0;
+    width: 1550px; /* Define a largura do contêiner */
+    height: 611px; /* Define a altura do contêiner */
+    /*border: 1px solid yellow;*/
+  }
+  
+  .creditos-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%; /* Ajusta o início dos agradecimentos para ficar logo abaixo do texto "Créditos" */
+    left: 42%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza vertical e horizontalmente */
+    animation: subir 20s linear infinite; /* Ajusta a duração da animação para 20 segundos */
+    /*border: 1px solid green;*/
+  }
+  
+  .creditos-lista li {
+    font-size: 24px; /* Tamanho grande de fonte */
+    white-space: nowrap; /* Evita que os agradecimentos quebrem em várias linhas */
+  }
+  
+  @keyframes subir {
+    0% {
+      transform: translateY(0); /* Define a posição inicial */
+    }
+    50% {
+      transform: translateY(-400%); /* Move os agradecimentos para cima */
+    }
+    100% {
+      transform: translateY(-900%); /* Move os agradecimentos completamente para cima */
+    }
+  }
+  
+/*-------------------- Estilo para os links de inspiração ------------------------ */
+.inspiracao {
+    text-align: center;
+  }
+  
+  .inspiracao h2 {
+    font-size: 24px;
+  }
+  
+  .cenário {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .item-mario {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .item-mario a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .moeda {
+    background-color: #ffd700; /* Cor da moeda */
+  }
+  
+  .flor {
+    background-color: #ff69b4; /* Cor da flor */
+  }
+  
+  .cogumelo {
+    background-color: #008000; /* Cor do cogumelo */
+  }
+  
+  .estrela {
+    background-color: #ffff00; /* Cor da estrela */
+  }
+  
+/* Estilo para a quarta parte (algo legal) */
+
+
+/*-----------------[ Modo escuro] ------------------------------*/
+
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  #darkModeButton {
+    position: fixed !important;
+    bottom: 80px !important;
+    right: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #333;
+    border-radius: 50% !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) !important;
+    cursor: pointer !important;
+    z-index: 9999 !important;
+    transition: background-color 0.3s ease !important;
+  }
+  
+  #darkModeIcon {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+/* ----------------------- [ RODAPÉ ] ------------------------------*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Para espaçar os elementos horizontalmente */
+}
+
+.botao-voltar {
+    margin-left: 10px; /* Adiciona um espaço à esquerda do botão */
+    background-color: transparent; /* Remove o fundo do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: #008000;
+}
+
+.audio-container {
+    display: flex;
+    align-items: center;
+    /*border: 1px solid red;*/
+    margin-right: 640px;
+}
+
+#vitrola {
+    width: 40px; /* Ajuste o tamanho da vitrola conforme necessário */
+    height: auto;
+    margin-right: 10px; /* Adicione um espaço entre a vitrola e o reprodutor de áudio */
+}
+
+#audioPlayer {
+    margin-right: 10px; /* Adicione um espaço entre o reprodutor de áudio e a vitrola */
+}
+
+/* ------------------------ [ BOTÃO SUBIR ] ------------------------ */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+#myBtn:hover {
+    background-color: #555;
+}
