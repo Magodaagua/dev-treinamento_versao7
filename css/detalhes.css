@@ -1,0 +1,91 @@
+.bd-mode-toggle {
+    z-index: 1500;
+}
+
+.modulo {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff; /* Altera a cor de fundo para verde */
+    border: 1px solid #ccc;
+    margin: 5px;
+    position: relative;
+    width: 98%; /* Defina a largura desejada */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+.modulo h5 {
+    color: #fff; /* Cor branca para o texto */
+}
+
+.aulas {
+    text-align: center;
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px;
+    margin-top: -6px;
+    width: 98%; /* Largura igual à dos módulos */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+.seta {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    transition: transform 0.3s;
+    fill: #fff; /* Cor branca para a imagem da seta */
+}
+
+.seta-texto {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    color: #fff; /* Cor branca para o texto */
+}
+
+.modulo.aberto .seta {
+    transform: rotate(90deg);
+}
+
+
+.num-aulas {
+    position: absolute;
+    top: 50%;
+    right: 60px; /* Ajuste a posição conforme necessário */
+    transform: translateY(-50%);
+    color: #fff; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+.fundo-transparente {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme necessário */
+    width: 15%;
+    height: 40px; /* Ajuste a altura conforme necessário */
+    top: 5px;
+    bottom: 5px;
+    right: 2%;
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+.titulo {
+    text-align: center;
+    color: black;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.informativo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.informativo img {
+    flex: 1; /* A imagem ocupará 1 unidade de espaço disponível */
+    margin-right: 20px; /* Adapte a margem conforme necessário */
+}
+
+.informativo-texto {
+    flex: 2; /* O texto ocupará 2 unidades de espaço disponíveis */
+}

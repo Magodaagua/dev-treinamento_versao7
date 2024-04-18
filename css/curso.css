@@ -1,0 +1,79 @@
+.page-item.active {
+    background-color: #007bff; /* Cor azul de destaque */
+    color: #fff; /* Cor do texto em destaque */
+}
+
+.titulo {
+    text-align: center;
+    color: black;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.tudo{
+    width:200%;
+    height:100%;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between; /* Isso coloca os itens nas extremidades da linha */
+}
+
+.texto-esquerda {
+    font-size: 80%;
+    color:black;
+}
+
+.texto-direita {
+    font-size: 80%;
+    color:black;
+}
+
+.card-text{
+    color:black;
+}
+
+.descricaotext{
+    color:black;
+}
+
+.inscricaostatus{
+    color:black;
+}
+
+.linha2 {
+    display: flex;
+    justify-content: space-between; /* Isso coloca os itens nas extremidades da linha */
+}
+
+.direita{
+    margin: 9% 20% 0% 1%;/*(top, right, bottom, and left)*/
+    text-align: center;
+    color:black;
+}
+
+.linha2 img{
+    margin: 9% 1% 0% 20%;/*(top, right, bottom, and left)*/
+    width: 40%;
+    height: auto;
+}
+
+.linha img{
+    width: 18px;
+}
+
+.botaocurso button{
+    width: 100%;
+    text-align: center;
+}
+
+.totalcursos{
+    background: #0070ff;
+    width: 15%;
+    height: 30%;
+    border: 1px solid #0070ff;
+    border-radius: 5px;
+    color: white;  
+    text-align: left;
+}

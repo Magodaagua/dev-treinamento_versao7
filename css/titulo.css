@@ -1,0 +1,1037 @@
+/* ------------------------ [ VARIÁVEIS ] ------------------------ */
+
+:root {
+    --branco: #FFFFFF;
+    --preto: #000000;
+    --amarelo: #ffcc00;
+    --cinza: #cccccc;
+    --cinza-claro1: #ecf0f1; /*para background */
+    --cinza-claro2: #E9E9E9;
+    --cinza-claro3: #E0E0E0;
+    --cinza-medio1: #999999;
+    --cinza-medio2: #555555;
+    --cinza-escuro1: #404040;
+    --cinza-escuro2: #252525; /* para o texto principal/cor fundo menu */
+    --vermelho-cop: #ce1126;
+    --vermelho-medio1: #B40404;
+    --vermelho-escuro1: #190707;
+    --vermelho-escuro2: #610B0B;
+    --cor-link-hover: #a11515;
+    --borda: #999;
+    --laranja: #be5a17;
+    --azul: rgba(42, 44, 70);
+}
+
+/* ------------------------ [ FONTE ] ------------------------ */
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../../COMUM/fonts/poppins/Poppins-Regular.ttf'); 
+}
+  
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('../../COMUM/fonts/poppins/Poppins-Medium.ttf'); 
+}
+  
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../../COMUM/fonts/poppins/Poppins-Bold.ttf'); 
+}
+  
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url('../../COMUM/fonts/poppins/Poppins-SemiBold.ttf'); 
+}
+  
+@import url('https://fonts.cdnfonts.com/css/community');
+
+
+/* ------------------------ [ HTML GERAL ] ------------------------ */
+
+body, html {
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins-Regular !important;
+    transition: background-color 0.5s ease !important;
+    /*background-color: var(--cinza-claro1);*/
+}
+
+/*Modo escuro*/
+
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+#darkModeButton {
+  position: fixed !important;
+  bottom: 80px !important;
+  right: 20px !important;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: #333;
+  border-radius: 50% !important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) !important;
+  cursor: pointer !important;
+  z-index: 9999 !important;
+  transition: background-color 0.3s ease !important;
+}
+
+#darkModeIcon {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Estilo para o modo escuro do menu superior */
+.top-menu.dark-mode {
+  background-color: #222; /* Cor de fundo no modo escuro */
+  color: #fff; /* Cor do texto no modo escuro */
+  /* Outros estilos para o modo escuro aqui */
+}
+
+.dark-mode .bottom-menu li a {
+  background-color: #222; /* Cor de fundo no modo escuro */
+  color: #fff; /* Cor do texto no modo escuro */
+  /* Outros estilos para o modo escuro aqui */
+}
+
+.dark-mode .bottom-menu {
+  background-color: #222; /* Cor de fundo no modo escuro */
+  color: #fff; /* Cor do texto no modo escuro */
+  /* Outros estilos para o modo escuro aqui */
+}
+
+.user-info.dark-mode{
+  background-color: #222; /* Cor de fundo no modo escuro */
+  color: #fff; /* Cor do texto no modo escuro */
+  /* Outros estilos para o modo escuro aqui */
+}
+
+/* ------------------------ [ MENUS ] ------------------------ */
+
+/* Estilos para o menu superior */
+.top-menu {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 80px !important;
+    z-index: 1000 !important; /* Garante que o menu esteja acima de outros elementos */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none !important;
+    /*border: 1px solid red;*/
+}
+
+.logomenu {
+  width: 200px !important; 
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  margin-left: 20px !important;
+}
+
+.logomenu img {
+  width: 100% !important; 
+}
+
+.hrrr hr{
+  width: 1000px !important;
+  border: 1px solid var(--cinza-escuro1);
+  background-color: var(--cinza-escuro1);
+  z-index: 999999 !important;
+}
+.top-menu ul li a {
+  position: relative !important;
+  color: #fff;
+  text-decoration: none !important;
+  padding-bottom: 5px !important;
+}
+
+.top-menu ul li a::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: -3px !important;
+  width: 100% !important;
+  height: 2px !important;
+  background-color: transparent !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.top-menu ul li a:hover::after {
+  background-color: #fff; /* Cor da linha de luz ao passar o mouse */
+}
+
+.logo {
+    width: 50px !important;
+
+}
+
+.logo img {
+    height: 40px !important; /* Ajuste a altura conforme necessário */
+    /*border: 1px solid red;*/
+}
+
+.nome-empresa {
+    font-size: 20px !important;
+    width: 250px !important;
+     /*border: 1px solid red;*/
+}
+
+.search-bar {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 50%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid red;*/
+}
+
+.search-bar input[type="text"] {
+    padding: 5px !important;
+    margin-right: 10px !important;
+    border-radius: 5px !important;
+    width: 80% !important;
+    display: flex;
+    /*border: 1px solid red;*/
+    
+}
+
+.search-bar button {
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    background-color: #fff;
+    border: none !important;
+    cursor: pointer !important;
+    /*border: 1px solid red;*/
+}
+
+.user-info {
+    width: calc((100%-80%)-200px);
+    height: 100% !important;
+    margin:0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: #000000;
+    /*border: 1px solid red;*/
+}
+
+.user-info img {
+    width: 40px !important; /* Ajuste a largura conforme necessário */
+    height: 40px !important; /* Ajuste a altura conforme necessário */
+    border-radius: 100% !important;
+    margin-left: 10px !important;
+    border: 1px solid var(--cinza-escuro1);
+    margin-right: 20px !important;
+    
+}
+
+/* Estilos para o menu inferior */
+.bottom-menu {
+  position: fixed !important;
+  top: 80px !important; /* Altura do menu superior */
+  left: 0 !important;
+  width: 100% !important;
+  height: 60px !important; /* Ajuste conforme necessário */
+  background-color: #ffffff;
+  color: #000000;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 999 !important; /* Certifique-se de que o menu inferior esteja acima do conteúdo da página */
+}
+
+
+.bottom-menu ul {
+    width: 100% !important;
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+    justify-content: space-between !important;
+    /*border: 1px solid red;*/
+}
+
+.bottom-menu ul li {
+    display: inline-block !important;
+    margin-right: 20px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    /*border: 1px solid red;*/
+}
+
+.bottom-menu ul li a {
+    position: relative !important;
+    color: #000000;
+    text-decoration: none !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    /*border: 1px solid red;*/
+}
+
+.bottom-menu ul li a::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: -3px !important;
+  width: 100% !important;
+  height: 2px !important;
+  background-color: transparent !important;
+  transition: background-color 0.3s ease !important;
+}
+.divUlPopupContaUser {
+  width: 200px !important;
+  height: 100px !important;
+  display: none !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important; /* Define a direção do flexbox como coluna */
+  position: fixed !important;
+  right: 0 !important;
+  margin-right: 15px !important;
+  background-color: #000000;
+  color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) !important;
+  align-items: center !important;
+  z-index: 99999 !important;
+  border-radius: 10px !important;
+}
+
+.popupContaUser li {
+  display: block !important;
+}
+
+.popupContaUser li:hover {
+  background-color: var(--vermelho-cop);
+}
+.popupContaUser ul {
+  display: block !important;
+}
+
+
+/* Estilos do pop-up */
+.popup {
+    display: none;
+    position: fixed !important;
+    background-color: #000000;
+    color: #fff;
+    padding: 8px !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 99999 !important;
+    width: 100% !important;
+    /*height:5% !important;*/
+    margin-top: 10px !important;
+ 
+}
+
+.menubaixo,
+.submenu {
+    display: none;
+    position: absolute !important;
+    background-color: #666;
+    padding: 10px !important;
+    border-radius: 10px !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center !important;
+}
+
+.popup ul, .popupContaUser ul,
+.menubaixo ul,
+.submenu ul {
+    width: 100% !important;
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    /*border: 1px solid red;*/
+}
+
+.popup li, .popupContaUser li,
+.menubaixo li,
+.submenu li {
+  width: 200px !important;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+    /*border: 1px solid blue;*/
+}
+
+.popup a, .popupContaUser a,
+.menubaixo a,
+.submenu a {
+    text-decoration: none !important;
+    color: #fff ;
+}
+
+.popup ul li a,
+.menubaixo ul li a,
+.submenu ul li a {
+    text-decoration: none !important;
+    color: #fff;
+    position: relative !important; /* Adiciona posição relativa para posicionar a linha branca */
+}
+
+.popup ul li a::after,
+.menubaixo ul li a::after,
+.submenu ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Distância da linha branca em relação ao texto */
+    width: 100%;
+    height: 2px; /* Espessura da linha branca */
+    background-color: #fa0000; /* Cor da linha branca */
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 0.3s ease; /* Efeito de transição */
+}
+
+.popup ul li a::after,
+.menubaixo ul li a::after,
+.submenu ul li a::after, 
+.bottom-menu ul li a::after {
+    content: '';
+    display: block;
+    width: 0; /* Começa com largura zero */
+    height: 2px; /* Altura da linha */
+    background-color: white; /* Cor da linha */
+    transition: width 0.6s ease; /* Transição da largura */
+    opacity: 1;
+}
+
+.popup ul li a:hover::after,
+.menubaixo ul li a:hover::after,
+.submenu ul li a:hover::after,
+.bottom-menu ul li a:hover::after{
+    width: 100%; /* Aumenta a largura para 100% ao passar o mouse */
+}
+
+
+
+/* Ajuste de posicionamento para o pop-up de Cursos */
+#cursosPopup {
+    top: 120px; /* Posiciona o pop-up abaixo do menu superior */
+    /*left: 48%; /* Centraliza horizontalmente */
+    /*transform: translateX(-50%); /* Centraliza horizontalmente */
+}
+
+/* Ajuste de posicionamento para o pop-up de Grupos */
+#gruposPopup {
+    top: 120px; /* Posiciona o pop-up abaixo do menu superior */
+    /*left: 56%; /* Centraliza horizontalmente */
+    /*transform: translateX(-50%); /* Centraliza horizontalmente */
+}
+
+/* Ajuste de posicionamento para o pop-up do usuário */
+#popup {
+    top: 55px; /* Posiciona o pop-up abaixo do menu superior */
+    right: 3%; /* Posiciona o pop-up à direita */
+}
+
+
+.arrowdown {
+  display: block;
+  position: absolute;
+  text-align: center;
+  transform: rotate(180deg);
+  margin-bottom: 2px;
+  top: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid #000000; /* Cor da seta */
+}
+
+#arrow-downGrupo {
+  left: 53%;
+}
+#arrow-downCurso {
+  left: 48%;
+}
+
+
+/* ------------------------ [ CARROSSEL ] ------------------------ */
+main {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*Carrosel Topo*/
+  .carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    margin-top: 80px;
+    text-align: center;
+    /*border: 1px solid red;*/
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /*border: 1px solid red;*/
+    margin: 0;/*(top, right, bottom, and left)*/
+    padding: 0;
+    width:100%;
+    height: 40%;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    /*min-height: 100%;*/
+    /*border: 1px solid blue;*/
+    margin: 0;/*(top, right, bottom, and left)*/
+    padding: 0;
+  }
+  
+  .carousel-item img {
+    height: 350px;
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 49px;
+    /*min-height: 100%;*/
+    /*border: 1px solid blue;*/
+    display: block; /* Adicione esta linha */
+  }
+  
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    border-radius: 0px 10px 0px 10px;
+    /*border: 1px solid yellow;*/
+  
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    color: white;
+    margin: 0 10px; /* Ajuste a margem conforme necessário */
+  }
+  
+  .carousel-prev {
+    left: 10px;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  .carousel-next {
+    right: 10px;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  .carousel-prev:hover,
+  .carousel-next:hover {
+    background-color: #2c2c2c;
+    font-size: 24px;
+  }
+  
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5); /* Branco transparente */
+    cursor: pointer;
+  }
+  
+  .active-indicator {
+    background-color: white; /* Branco opaco para o indicador ativo */
+  }
+  /*------------------------------------------------------------------------------------------------------------*/
+  /*Carrosel Meio*/
+  .custom-carousel {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    margin: 0 auto;
+    /*border: 1px solid black;*/
+  }
+  
+  .custom-car {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /*border: 1px solid black;*/
+  }
+  
+  .curso-andamento {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--borda);
+  }
+  
+  .curso-andamento img {
+    width: 80%;
+    height:80%;
+    /*border: 1px solid green;*/
+  }
+  
+  .divImgContinuar {
+    height: 100%;
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid red;*/
+  }
+  
+  .textos {
+    flex: 1;
+    /*margin-left: 10px;*/
+    text-align: LEFT;
+    /*border: 1px solid rgb(201, 8, 8);*/
+  }
+  
+  .textos h4,p {
+    margin:0;
+    padding:0;
+    /*border: 1px solid rgb(201, 8, 8);*/
+  }
+
+  .curso-andamento h4 {
+    text-align: center;
+  }
+  
+  .continua {
+    background-color: #007bff; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .curso-andamento p {
+    margin: 0;
+    text-align: center;
+  }
+  
+  .btnContinuarCurso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    /*border: 1px solid orangered;*/
+  }
+  
+  .carrossel-controls {
+    position: relative;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .control-preve,
+  .control-nexte {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo transparente */
+    border-radius: 50%;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    border: none;
+    color: white; /* Cor do ícone */
+
+  }
+  
+  .container-seta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 45px;
+    /*border: 1px solid magenta;*/
+  }
+
+  .control-preve {
+    margin-left: 2px;
+    border-width: 10% 0 10% 0;/*(top, right, bottom, and left)*/
+    border-color: transparent white transparent transparent;
+  }
+  
+  .control-nexte {
+    margin-right: 2px;
+    border-width: 10% 0 10% 0;/*(top, right, bottom, and left)*/
+    border-color: transparent transparent transparent white;
+  }
+
+  .control-preve:hover,
+  .control-nexte:hover {
+    background-color: #2c2c2c;
+    font-size: 24px;
+  }
+  
+  .containerContinueAprendendo {
+    margin: 5px;
+    /*border: 1px solid palevioletred;*/
+  }
+  
+  .containerContinueAprendendo h1{
+    margin-top:30px;
+    /*justify-content:center;*/
+    margin-left: 50px;
+  }
+
+  .containerContinueAprendendo p{
+    margin-top:10px;
+    margin-left: 50px;
+  }
+
+/*------------------------------------------------------------------------------------------------------------*/
+/*Carrosel Baixo*/
+/* Estilos para o carrossel */
+.slider {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  margin: 0 auto;
+  /*border: 1px solid red;*/
+}
+
+.carrossel-tres {
+  width: 100%;
+  display: flex;
+  /*align-items: flex-start; /* Alinha os itens no topo */
+  flex-direction: column; /* Empilha os elementos verticalmente */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  transition: transform 0.5s ease-in-out;
+  /*border: 1px solid purple;*/
+}
+
+.cursos-do-carrossel{
+  width: 80%;
+  height: 90%;
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  /*flex: 1;*/
+  /*margin: 5px;*/
+  border-radius: 20px;
+  border: 2px solid var(--borda);
+  box-shadow: #2c2c2c;
+  /*border: 1px solid rgb(12, 163, 24);*/
+}
+
+.Imagem-carrossel-dois{
+  width: 99%; /* Largura da imagem */
+  height: 50%; /* Altura automática para manter a proporção */
+  /*display: flex;*/
+  align-items: flex-start; /* Posiciona a imagem no topo */
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  /*border: 1px solid red;*/
+  margin-top: 0px;
+  margin-left: 3px;
+  margin-right: 2px;
+}
+
+.Imagem-carrossel-dois img {
+  height: 70%;
+  width: 70%;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  /*border: 1px solid blue;*/
+}
+
+.carrosel-textos-dois{
+  width: 95%; /* Largura do texto */
+  height: 50%; /* Largura do texto */
+  display: flex;
+  flex-direction: column; /* Alinha os elementos verticalmente */
+  align-items: center;
+  align-self: center;
+  margin-left: 5px;
+  padding:0;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  margin-top: -17px; /* Adiciona espaço entre a imagem e o texto */
+  /*border: 1px solid rgb(201, 8, 8);*/
+}
+
+.carrosel-textos-dois h4,p {
+  margin:0;
+  /*margin-top: 2px;*/
+  padding:0;
+  align-self: center;
+  align-items: center;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  /*border: 1px solid rgb(201, 8, 8);*/
+}
+
+.carrosel-textos-dois h4 {
+  margin-top: 10px; /* Espaçamento entre o título e o parágrafo */
+  align-self: center;
+  text-align: center; /* Centraliza o texto */
+}
+
+.carrosel-textos-dois p {
+  margin: 10px 0; /* Espaçamento acima e abaixo do parágrafo */
+  align-self: center;
+  text-align: center; /* Centraliza o texto */
+}
+
+.continua-botao {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.Nome-curso {
+  text-align: center; /* Centraliza o texto */
+  margin-top: 10px; /* Adiciona um pequeno espaço entre a imagem e o nome do curso */
+  /*border: 1px solid green;*/
+}
+
+.btnContinuarCurso-botao {
+  display: flex;
+  flex-direction: column; /* Alinha os elementos verticalmente */
+  justify-content: center; /* Centraliza os elementos verticalmente */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  margin-top: -32px; /* Adiciona espaço entre o texto e o botão */
+  /*border: 1px solid yellow;*/
+}
+
+.container-seta-2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 45px;
+  height: 90%;
+  /*border: 1px solid magenta;*/
+}
+
+.control-preve-dois,
+.control-nexte-dois {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo transparente */
+  border-radius: 50%;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+  border: none;
+  color: white; /* Cor do ícone */
+
+}
+
+.control-preve-dois {
+  margin-right: 2px;
+  margin-left: 1px;
+  border-width: 10% 0 10% 0;/*(top, right, bottom, and left)*/
+  border-color: transparent white transparent transparent;
+  /*border: 1px solid black;*/
+}
+
+.control-nexte-dois {
+  margin-right: 1px;
+  margin-left: 2px;
+  border-width: 10% 0 10% 0;/*(top, right, bottom, and left)*/
+  border-color: transparent transparent transparent white;
+  /*border: 1px solid black;*/
+}
+
+.control-preve-dois:hover,
+.control-nexte-dois:hover {
+  background-color: #2c2c2c;
+  font-size: 24px;
+}
+
+
+/* ------------------------ [ ESTRELAS DO SISTEMA DE AVALIAÇÃO ] ------------------------ */
+
+/* Não exibir o input radio */
+.estrelas input[type=radio] {
+    display: none;
+}
+
+/* Criar as estrelas preenchidas de amarelo*/
+.estrelas label i.opcao.fa:before {
+    content: '\f005';
+    color: var(--amarelo);
+}
+
+/* Atribuir o cinza nas estrelas, quando selecionar a estrela retirar o cinza*/
+.estrelas input[type=radio]:checked~label i.fa:before {
+    color: var(--cinza);
+}
+
+/* Personalizar a estrela preenchida */
+.estrela-preenchida {
+    color: var(--amarelo);
+}
+
+/* Personalizar a estrela vazia */
+.estrela-vazia{
+    color: var(--cinza);
+}
+
+/* ------------------------ [ BOTÃO SUBIR ] ------------------------ */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+#myBtn:hover {
+    background-color: #555;
+}
+
+/* ------------------------ [ CENTRAL DE AJUDA CHAT BOTÃO SUPORTE ] ------------------------ */
+
+.botaosuporte{
+  width: 10%;
+}
+
+/* ------------------------ [ certificadoscopimaq ] ------------------------ */
+
+.imagemdocertificado{
+  width: 100px;
+  height:100px;
+  margin-right:30px;
+  margin-left:0;
+}
+
+.certificado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.certificado-info {
+  display: flex;
+  align-items: center;
+}
+
+.diploma-img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.titulo-curso {
+  margin: 0;
+}
+
+.info-curso {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.progress-bar-container {
+  width: 100%;
+  position: relative;
+  margin-top: 5px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #28a745;
+  position: relative;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-container {
+  margin-top: 10px;
+}

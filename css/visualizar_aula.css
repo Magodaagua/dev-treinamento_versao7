@@ -1,0 +1,80 @@
+.modulo {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff; /* Altera a cor de fundo para verde */
+    border: 1px solid #ccc;
+    margin: 20px;
+    position: relative;
+    width: 90%; /* Largura dos módulos */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+.nome-mdu {
+    display: inline-block;
+    word-break: break-word; /* Adiciona a quebra de palavra */
+}
+
+.aulas {
+    display: none;
+    padding: 10px;
+    background-color: gray;
+    border: 1px solid #ddd;
+    margin: 20px;
+    margin-top: -6px;
+    width: 90%; /* Largura das aulas */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+.seta {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    transition: transform 0.3s;
+}
+
+.modulo.aberto .seta {
+    transform: rotate(90deg);
+}
+
+#menu-lateral {
+    position: fixed;
+    top: 50px; /* Adicione uma margem superior para evitar cortes */
+    right: -300px; /* Ajuste o valor para a largura desejada */
+    height: calc(100vh - 20px); /* Deduz a margem superior para manter a altura correta */
+    width: 400px; /* Largura desejada */
+    background-color: #343a40; /* Cor de fundo desejada */
+    color: #fff;
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical */
+    transition: right 0.3s; /* Adicione uma transição suave à animação */
+
+}
+
+#menu-lateral.show {
+    right: 0;
+}
+
+#button1{
+    justify-content: left;
+    text-align: left;
+    margin-right: 30px;
+}
+
+#toggle-menu{
+    justify-content: right;
+    text-align: right;
+    margin-left: 30px;
+}
+
+#teste{
+    display:inline-block;
+    width: 100px;
+}
+
+.barra{
+    text-align: center;
+    color: white;
+}
+
+.container{
+    background: white;
+}

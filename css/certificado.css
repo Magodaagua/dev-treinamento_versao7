@@ -1,0 +1,164 @@
+/* ------------------------ [ FONTE ] ------------------------ */
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../../COMUM/fonts/poppins/Poppins-Regular.ttf'); 
+}
+  
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('../../COMUM/fonts/poppins/Poppins-Medium.ttf'); 
+}
+  
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../../COMUM/fonts/poppins/Poppins-Bold.ttf'); 
+}
+  
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url('../../COMUM/fonts/poppins/Poppins-SemiBold.ttf'); 
+}
+  
+@import url('https://fonts.cdnfonts.com/css/community');
+
+/*--------------------------------------------------------------*/
+@page { 
+    margin: 0; 
+}
+
+body, html {
+    font-family: Poppins-Regular;
+    /*background-color: var(--cinza-claro1);*/
+}
+
+.imagemdefundo {
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../COMUM/img/certificado/teste.jpg");
+    background-repeat: no-repeat;
+    background-size: 1114px 785px;
+    border: 1px solid green;
+}
+
+.containerCertificado{
+    position: relative;
+    width: 1117px;
+    height: 787px;
+    text-align: center;
+    border: 2px solid red;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins-Regular;
+}
+
+.topoimagem{
+    width: 100px;
+    height: 100px;
+    margin-left: 509px;
+    margin-top: 50px;
+    background-image: url("../../COMUM/img/certificado/iconCopimaq.png");
+    background-size: 100%;
+    border: 2px solid red;
+
+}
+
+.selo{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin-left: 820px;
+    margin-bottom: 0;
+    margin-top:-53px;
+    border: 1px solid black;
+}
+
+.selo img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid yellow;
+}
+
+.topotitulo{
+    width: 100%;
+    height: 50px;
+    font-size: 25px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+    text-align: center;
+    border: 2px solid rgb(81, 14, 119);
+    font-family: Poppins-Regular;
+}
+
+.toponomedaempresa{
+    width: 100%;
+    height: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 50px;
+    text-align: center;
+    border: 2px solid green;
+    font-family: Poppins-Regular;
+
+}
+
+.textoum{
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-align: center;
+    font-family: Poppins-Regular;
+}
+
+.textomeio{
+    width: 100%;
+    height: 100px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+    text-align: center;
+    border: 2px solid blue;
+    font-family: Poppins-Regular;
+}
+
+.textodois{
+    font-size: 25px;
+    text-align: center;
+    font-family: Poppins-Regular;
+}
+
+.final {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0 0;
+    margin-top: 20px;
+    border: 2px solid yellow;
+    overflow: hidden; /* Limpa o float */
+}
+
+.assinaturaesquerda {
+    float: left; /* Coloca a assinaturaesquerda à esquerda */
+    width: 35%; /* Define a largura para 50% para ocupar metade do espaço */
+    height: auto;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 50px;
+    text-align: center;
+    border: 2px solid purple;
+    font-family: Poppins-Regular;
+}
+
+.assinaturadireita {
+    float: right; /* Coloca a assinaturadireita à direita */
+    width: 35%; /* Define a largura para 50% para ocupar metade do espaço */
+    height: auto;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-right: 50px;
+    text-align: center;
+    border: 2px solid orangered;
+    font-family: Poppins-Regular;
+}

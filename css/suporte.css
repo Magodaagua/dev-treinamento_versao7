@@ -1,0 +1,86 @@
+
+.chat-container {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    height: 80%;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.chat-header {
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.messages-container {
+    max-height: 350px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-form input,
+.chat-form button {
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.chat-form input[type="text"] {
+    flex-grow: 1;
+}
+
+.chat-form button {
+    background-color: #25D366;
+    color: #fff;
+    cursor: pointer;
+}
+
+.chat-form button:hover {
+    background-color: #128C7E;
+}
+
+/* Adicione classes específicas para o suporte e o cliente */
+.message-balloon {
+    max-width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    clear: both;
+    color: black !important;
+}
+
+.message-balloon.suporte {
+    float: left;
+    background-color: #d0e8f7;
+}
+
+.message-balloon.cliente {
+    float: right;
+    background-color: #e2e5e7;
+}
+
+.data {
+    font-size: 12px; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #777; /* Cor cinza ou outra cor desejada */
+    float: left; /* Alinha a data à esquerda */
+}
+
+.hora {
+    font-size: 12px; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #777; /* Cor cinza ou outra cor desejada */
+    float: right; /* Alinha a hora à direita */
+}

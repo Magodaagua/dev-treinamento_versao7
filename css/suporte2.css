@@ -1,0 +1,164 @@
+
+.chat-container {
+    width: 70%; /* Ajuste a largura conforme necessário */
+    height: 80%;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    float: left; /* Adicione para alinhar à esquerda */
+}
+
+/* Mantenha o restante do seu CSS */
+
+.participants-container {
+    width: 30%;
+    float: right;
+    background-color: #fff; /* Alterado para branco */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Adicionado sombra */
+    border-radius: 10px; /* Adicionado bordas arredondadas */
+    overflow-y: auto; /* Adicione uma barra de rolagem vertical se necessário */
+    position: relative;
+    height: 100%;
+    padding: 10px;
+    /*margin-top: 5px; /* Adicionado margem superior */
+}
+
+/* Adicionando estilo para o título */
+.participants-container .chat-header {
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    margin: -10px -10px 10px -10px; /* Adicionado margens negativas para cobrir toda a parte superior */
+    border-radius: 0px 10px 0 0; /* Arredondado apenas as bordas superiores */
+}
+
+
+.chat-header {
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.messages-container {
+    max-height: 350px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.Nomedousuario{
+    color:black;
+}
+
+.chat-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    position: relative; /* Adicionado para o posicionamento absoluto */
+}
+
+.chat-form input,
+.chat-form button {
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.chat-form input[type="text"] {
+    flex-grow: 1;
+}
+
+.chat-form button {
+    background-color: #25D366;
+    color: #fff;
+    cursor: pointer;
+}
+
+.chat-form button:hover {
+    background-color: #128C7E;
+}
+
+/* Adicione classes específicas para o suporte e o cliente */
+.message-container {
+    clear: both;
+    margin-bottom: 20px; /* Ajuste conforme necessário */
+}
+
+.my-message {
+    background-color: #d4edda;
+    color: black;
+    text-align: right;
+    float: right; /* Alinhe à direita */
+}
+
+.other-message {
+    background-color: #f8f9fa;
+    text-align: left;
+    float: left; /* Alinhe à esquerda */
+}
+
+.message-balloon {
+    max-width: 80%; /* Ajuste conforme necessário */
+    padding: 15px; /* Ajuste conforme necessário */
+    border-radius: 15px; /* Ajuste conforme necessário */
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.message-text {
+    text-align: justify; /* Justifica o texto */
+}
+
+.data{
+    font-size: 12px;
+    color: #777;
+    position: absolute;
+    bottom: 1px; /* Posicione um pouco abaixo do balão de fala */
+    right: 10px; /* Alinhe a data à direita dentro do balão de fala */
+}
+
+.hora {
+    font-size: 12px;
+    color: #777;
+    position: absolute;
+    bottom: 1px; /* Posicione um pouco abaixo do balão de fala */
+    left: 10px; /* Alinhe a hora à esquerda dentro do balão de fala */
+}
+
+#emoji-button {
+    font-size: 20px;
+    position: absolute; /* Alterado para posição absoluta */
+    right: 95%; /* Ajuste conforme necessário */
+    top: 50%; /* Alinha o botão verticalmente com o campo de mensagem */
+    height: 45px;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+.emoji-popup {
+    position: absolute;
+    bottom: 70px;
+    right: 89%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    display: none;
+}
+
+.emoji-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.emoji {
+    cursor: pointer;
+    font-size: 24px;
+    margin: 5px;
+}
